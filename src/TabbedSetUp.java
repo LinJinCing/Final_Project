@@ -1,9 +1,12 @@
+import javax.swing.JFrame;
+
 
 public class TabbedSetUp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		TabbedSpecies tabbedSpecies = new TabbedSpecies();  
+		
 	}
 
 }
