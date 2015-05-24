@@ -1,9 +1,49 @@
 package tku.g4.game_tab1;
 
+import java.util.Random;
+import java.util.Scanner;
+
 import javax.swing.JPanel;
 
 public class Game1Panel extends JPanel{
 	
+	private int Ans1;
+	private int Ans2;
+	private int Ans3;
+	private int Ans4;
+	
+	private int x1;
+	private int x2;
+	private int x3;
+	private int x4;
+	
+	private int countA = 0;
+	private int countB = 0;
 
-
+	Random rand = new Random();
+	Scanner input = new Scanner(System.in);
+	
+	public Game1Panel(){
+		Ans1 = rand.nextInt(10);
+		Ans2 = rand.nextInt(10);
+		Ans3 = rand.nextInt(10);
+		Ans4 = rand.nextInt(10);
+		x1 = input.nextInt();
+		x2 = input.nextInt();
+		x3 = input.nextInt();
+		x4 = input.nextInt();
+		
+		if(x1 == Ans1){
+			countA++;
+		}
+		if(x2 == Ans2){
+			countA++;
+		}
+		if(x3 == Ans3){
+			countA++;
+		}
+		if(x4 == Ans4){
+			countA++;
+		}
+	}
 }
