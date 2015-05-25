@@ -45,5 +45,18 @@ public class Game1Panel extends JPanel{
 		if(x4 == Ans4){
 			countA++;
 		}
+		
+		if(x1 == Ans2 || x1 == Ans3 || x1 == Ans4){
+			countB++;
+		}
+		if(x2 == Ans1 || x2 == Ans3 || x2 == Ans4){
+			countB++;
+		}
+		if(x3 == Ans1 || x3 == Ans2 || x3 == Ans4){
+			countB++;
+		}
+		if(x4 == Ans1 || x4 == Ans2 || x4 == Ans3){
+			countB++;
+		}
 	}
 }
