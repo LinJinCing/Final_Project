@@ -3,7 +3,9 @@ package tku.g4.game_tab1;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Game1Panel extends JPanel{
 	
@@ -16,6 +18,13 @@ public class Game1Panel extends JPanel{
 	private int x2;
 	private int x3;
 	private int x4;
+	
+	private JPanel middlePanel;
+	
+	private JTextField field;
+	
+	//顯示板還沒宣告
+	private JButton restart;
 	
 	private int countA = 0;
 	private int countB = 0;
