@@ -1,71 +1,55 @@
 package tku.g4.game_tab1;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.Random;
 import java.util.Scanner;
 
 import javax.swing.JButton;
+import javax.swing.JColorChooser;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Game1Panel extends JPanel{
-	
-	private int Ans1;
-	private int Ans2;
-	private int Ans3;
-	private int Ans4;
-	
-	private int x1;
-	private int x2;
-	private int x3;
-	private int x4;
-	
-	private JPanel middlePanel;
-	
-	private JTextField field;
-	
-	//顯示板還沒宣告
-	private JButton restart;
-	
-	private int countA = 0;
-	private int countB = 0;
 
-	Random rand = new Random();
-	Scanner input = new Scanner(System.in);
+public class Game1Panel extends JPanel implements ActionListener, ItemListener{
 	
-	public Game1Panel(){
-		Ans1 = rand.nextInt(10);
-		Ans2 = rand.nextInt(10);
-		Ans3 = rand.nextInt(10);
-		Ans4 = rand.nextInt(10);
-		x1 = input.nextInt();
-		x2 = input.nextInt();
-		x3 = input.nextInt();
-		x4 = input.nextInt();
-		
-		if(x1 == Ans1){
-			countA++;
-		}
-		if(x2 == Ans2){
-			countA++;
-		}
-		if(x3 == Ans3){
-			countA++;
-		}
-		if(x4 == Ans4){
-			countA++;
-		}
-		
-		if(x1 == Ans2 || x1 == Ans3 || x1 == Ans4){
-			countB++;
-		}
-		if(x2 == Ans1 || x2 == Ans3 || x2 == Ans4){
-			countB++;
-		}
-		if(x3 == Ans1 || x3 == Ans2 || x3 == Ans4){
-			countB++;
-		}
-		if(x4 == Ans1 || x4 == Ans2 || x4 == Ans3){
-			countB++;
-		}
-	}
+	private JPanel centerPanel;
+	
+    private JPanel GameStartPanel;
+    private JButton start;
+	
+    public Game1Panel(){
+    	super();
+    	this.setLayout(new BorderLayout());
+    	
+    	centerPanel = new JPanel();
+    	
+    	GameStartPanel = new JPanel(new GridLayout(2,1));
+    	start = new JButton("START");
+    	GameStartPanel.add(start);
+    	start.addActionListener(this);
+    	
+    	centerPanel.add(GameStartPanel, BorderLayout.CENTER);
+    	
+    }
+    
+    public void actionPerformed(ActionEvent e){
+    	/*if (e.getSource() == start){
+    		GameRun run = new GameRun();
+    		run.setSize( 800, 800 ); // set frame size
+    		run.setVisible( true ); // display frame
+    	}*/
+    }	
+    public void itemStateChanged( ItemEvent e )
+    {
+
+    } // end method itemStateChanged
+    
+
 }

@@ -17,7 +17,7 @@ public class TabbedSpecies extends JFrame{
 	      JTabbedPane tabbedPane = new JTabbedPane();
 	      
 	      Game1Panel g1 = new Game1Panel(); // create 1st panel
-	      tabbedPane.addTab( "Game1" , null , g1 , "1st panel" ); 
+	      tabbedPane.addTab( "Game1", null, g1, "First panel" ); 
 	      
 	      Game2Panel g2 = new Game2Panel(); // create 2nd panel
 	      tabbedPane.addTab( "Game2" , null , g2 , "2nd panel" );
