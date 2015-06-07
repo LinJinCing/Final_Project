@@ -240,7 +240,7 @@ public class GameRun extends JFrame implements ActionListener, ItemListener{
 			}
 			if(YourAns == RealAns){
 				count++;
-				string = String.format("You ger the right number:%d\nYou guess %d times",RealAns,count);
+				string = String.format("You get the right number:%d\nYou guess %d times",RealAns,count);
 				JOptionPane.showMessageDialog(null, string ,
 				          "Congratulation",
 				          JOptionPane.INFORMATION_MESSAGE);
