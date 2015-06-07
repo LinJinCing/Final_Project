@@ -48,6 +48,7 @@ public class GameRun extends JFrame implements ActionListener, ItemListener{
     private int YourAns;
     private int max = 100;
     private int min = 1;
+    private int count = 0;
     
 	
 	public GameRun(){
@@ -224,6 +225,7 @@ public class GameRun extends JFrame implements ActionListener, ItemListener{
 				JOptionPane.showMessageDialog(null, string ,
 				          "Remind",
 				          JOptionPane.INFORMATION_MESSAGE);
+				count++;
 				field.setText("");
 			}
 			
@@ -233,10 +235,12 @@ public class GameRun extends JFrame implements ActionListener, ItemListener{
 				JOptionPane.showMessageDialog(null, string ,
 				          "Remind",
 				          JOptionPane.INFORMATION_MESSAGE);
+				count++;
 				field.setText("");
 			}
 			if(YourAns == RealAns){
-				string = String.format("You ger the right number:%d",RealAns);
+				count++;
+				string = String.format("You ger the right number:%d\nYou guess %d times",RealAns,count);
 				JOptionPane.showMessageDialog(null, string ,
 				          "Congratulation",
 				          JOptionPane.INFORMATION_MESSAGE);
